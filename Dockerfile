@@ -10,7 +10,7 @@ RUN echo "Installing GraalVM native image" && \
     ./mvnw package -Pnative
 
 #Create the final runner image
-FROM oracle/graalvm-ce:20.1.0-java11
+FROM oraclelinux:7-slim
 
 LABEL "maintainer"="Alexandro Blanco" \
       "description"="simple hello world application with quarkus framework"
